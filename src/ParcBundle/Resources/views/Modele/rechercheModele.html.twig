@@ -1,0 +1,31 @@
+<h1>recherche d'un modele</h1>
+<form action="" method="POST">
+
+    Recherche : <input type="text" name="input_recheche"/>
+    <input type="submit" name="recherche" value="Recherche"/>
+
+</form>
+
+{% if modeles is empty %}
+Auccun modeles trouver
+{% else %}
+
+    <table border="1">
+
+        <tr>
+            <th>libelle</th>
+            <th>pays</th>
+        </tr>
+
+        {% for modele in modeles %}
+
+            <tr>
+                <td>{{ modele.libelle }}</td>
+                <td>{{ modele.pays }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+
+
+{% endif %}

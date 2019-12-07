@@ -1,0 +1,23 @@
+parc_homepage:
+    path:     /
+    defaults: { _controller: ParcBundle:Default:index }
+
+parc_affichage_modele:
+    path:     /listModele
+    defaults: { _controller: ParcBundle:Modele:list }
+
+parc_ajout_modele:
+    path:     /addModele
+    defaults: { _controller: ParcBundle:Modele:add }
+
+parc_supprime_modele:
+    path:     /supprimeModele/{id}
+    defaults: { _controller: ParcBundle:Modele:delete}
+
+parc_modifier_modele:
+    path:     /modifierModele/{id}
+    defaults: { _controller: ParcBundle:Modele:update}
+
+parc_recherche_modele:
+    path: /recherche
+    defaults: { _controller: ParcBundle:Modele:recherche}

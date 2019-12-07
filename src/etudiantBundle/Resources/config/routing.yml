@@ -1,0 +1,12 @@
+etudiant_homepage:
+    path:     /
+    defaults: { _controller: etudiantBundle:Default:index }
+
+list:
+    path:     /list
+    defaults: { _controller: etudiantBundle:Etudiant:list }
+
+Affectation:
+    path:     /affect
+    defaults: { _controller: etudiantBundle:Etudiant:affecter }
+

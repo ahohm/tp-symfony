@@ -1,0 +1,21 @@
+<h1>
+    Liste des Modeles
+</h1>
+
+<table border="1">
+    <tr>
+        <th>idModele</th>
+        <th>libelle</th>
+        <th>Pays</th>
+
+    </tr>
+    {% for modele in modeles %}
+        <tr>
+            <td>{{ modele.id }}</td>
+            <td>{{ modele.libelle }}</td>
+            <td>{{ modele.pays }}</td>
+            <td><a href="{{ path("parc_supprime_modele", {'id': modele.id}) }}" >supprimer</a></td>
+            <td><a href="{{ path("parc_modifier_modele", {'id': modele.id}) }}" >modifier</a></td>
+        </tr>
+    {% endfor %}
+</table>

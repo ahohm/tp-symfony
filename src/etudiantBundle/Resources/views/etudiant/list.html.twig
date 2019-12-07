@@ -1,0 +1,20 @@
+<h2>List des modules</h2>
+<table border="1">
+    <tr>
+        <th>idModule</th>
+        <th>nomModule</th>
+        <th>Eseignant</th>
+        <th>Nombres d'heures</th>
+        <th>date debut</th>
+    </tr>
+    {% for module in modules %}
+    <tr>
+        <td>{{ module.id }}</td>
+        <td>{{ module.nom }}</td>
+        <td>{{ module.enseignant }}</td>
+        <td>{{ module.nbrHeure }}</td>
+        <td>{{ module.date }}</td>
+        <td><a href="{{ path('Affectation') }}" target="_blank">Affecter</a></td>
+    </tr>
+    {% endfor %}
+</table>
